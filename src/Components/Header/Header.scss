@@ -1,0 +1,30 @@
+.header {
+    background-color: #002F34;
+    min-height: 70px;
+    display: flex;
+    align-items: center;
+    color: white;
+
+    &__logo {
+        width: 60px;
+        display: flex;
+    }
+
+    &__nav {
+        display: flex;
+        align-items: center;
+        gap: 0 2rem;
+    }
+
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__list {
+        display: flex;
+        align-items: center;
+        gap: 0 10px;
+    }
+}
