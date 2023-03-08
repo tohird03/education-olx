@@ -1,5 +1,5 @@
 import React from 'react';
-import Container from '../../Utils/Container/Container';
+import {Container} from '../../Utils/Components';
 import "./Header.scss"
 
 import { FiMessageCircle, FiHeart, FiUser } from "react-icons/fi";

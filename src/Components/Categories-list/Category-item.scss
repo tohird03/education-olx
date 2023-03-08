@@ -1,0 +1,28 @@
+.category {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+    &__item-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+        width: 100%;
+        flex-wrap: wrap;
+        padding: 100px 0;
+    }
+
+    &__item-img {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+    }
+
+    &__item-heading {
+        margin-top: 30px;
+        font-weight: 500;
+        font-style: 20px;
+    }
+}
