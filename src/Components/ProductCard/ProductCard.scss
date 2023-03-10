@@ -1,0 +1,43 @@
+.product {
+    &__card {
+        min-width: 0;
+        display: flex;
+        flex-direction: column;
+        background: #fff;
+        padding: 15px;
+        position: relative;
+        box-sizing: border-box;
+        border-radius: 4px;
+        margin-left: 15px;
+        margin-top: 15px;
+        width: calc(25% - 15px);
+
+    }
+
+    &__img {
+        width: 268px;
+        margin-bottom: 20px;
+    }
+
+    &__heading {
+        font-size: 18px;
+        font-weight: 500;
+        margin-bottom: 20px;
+    }
+
+    &__desc {
+        margin-bottom: 30px;
+        flex-grow: 1;
+    }
+    &__price-wrapper {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+    }
+}
+
+.product__main-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    grid-template-columns: repeat(4, 1fr);
+}
