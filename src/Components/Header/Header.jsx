@@ -1,5 +1,6 @@
 import React from 'react';
 import {Container} from '../../Utils/Components';
+import {Link} from "react-router-dom"
 import "./Header.scss"
 
 import { FiMessageCircle, FiHeart, FiUser } from "react-icons/fi";
@@ -23,10 +24,10 @@ const Header = () => {
                             </li>
                         </ul>
 
-                        <button>
+                        <Link to="/message">
                             <FiMessageCircle />
                             Сообщения
-                        </button>
+                        </Link>
 
                         <button>
                             <FiHeart />

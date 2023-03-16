@@ -17,7 +17,7 @@ const ProductMain = () => {
                 <div className='product__main-wrapper'>
                     {
                         productData.map(item => {
-                            return <ProductCard data={item} />
+                            return <ProductCard key={item.id} data={item} />
                         })
                     }
                 </div>
