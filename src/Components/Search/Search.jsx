@@ -2,10 +2,12 @@ import React, { useState } from 'react';
 import { FiSearch } from 'react-icons/fi';
 import { instance } from '../../Api/instance';
 import { Link, useNavigate } from 'react-router-dom';
+import { useTranslation } from "react-i18next";
 import { Container } from '../../Utils/Components';
 import "./Search.scss";
 
 const Search = () => {
+    const { t } = useTranslation()
     const [searchTitle, setSearchTitle] = useState([])
     const [search, setSearch] = useState("")
     const navigate = useNavigate();
@@ -51,7 +53,7 @@ const Search = () => {
                             }
 
                         </div>
-                        <button type='submit'>Qidirish</button>
+                        <button type='submit'>{t("search__btn-text")}</button>
                     </form>
                 </div>
             </Container>

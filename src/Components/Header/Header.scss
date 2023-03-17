@@ -27,4 +27,11 @@
         align-items: center;
         gap: 0 10px;
     }
+    &__nav-link {
+        display: flex;
+        align-items: center;
+        color: white;
+        text-decoration: none;
+        gap: 10px;
+    }
 }

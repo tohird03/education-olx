@@ -17,7 +17,7 @@ const CategoriesList = () => {
                 <div className='category__item-wrapper'>
                     {
                         categoryData.map(item =>
-                            <CategoryItem key={item.id} img={item.image} title={item.name} />
+                            <CategoryItem key={item.id} img={item.image} title={item.name} id={item.id}/>
                         )
                     }
                 </div>
