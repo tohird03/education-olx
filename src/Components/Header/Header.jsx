@@ -36,7 +36,7 @@ const Header = () => {
                             <FiHeart />
                         </button>
 
-                        <Link className='header__nav-link' to="/">
+                        <Link className='header__nav-link' to="/auth">
                             <FiUser/>
                             {t("header__account")}
                         </Link>
