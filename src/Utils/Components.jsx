@@ -9,7 +9,6 @@ const Container = ({children}) => {
 
 
 const Button = ({type, text}) => {
-    console.log(type);
     return (
         <button className={type == "light" ? "btn--light" : "btn--dark"}>
             {text}
