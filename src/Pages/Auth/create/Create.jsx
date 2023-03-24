@@ -1,11 +1,20 @@
 import React from 'react';
+import { useNavigate  } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
 import { instance } from '../../../Api/instance';
+import Header from '../../../Components/Header/Header';
 import { auth, provider } from '../../../Firebase/firebaseconfig';
 const Create = () => {
+    const navigate = useNavigate()
+    const dispatch = useDispatch()
     const handleAuthWithGoogle = () => {
         auth.signInWithPopup(provider)
             .then(res => {
-                authWithGoogle(res)
+                if (res.user.email) {
+                    dispatch({ email: res.user.email, type: "SEND_EMAIL" })
+                    authWithGoogle(res)
+                    navigate("/")
+                }
             })
     }
 
@@ -18,14 +27,14 @@ const Create = () => {
             body: JSON.stringify({
                 name: res.user.multiFactor.user.displayName,
                 email: res.user.multiFactor.user.email,
-                password: res.user.multiFactor.user.displayName,
+                password: 12345678,
                 avatar: res.user.multiFactor.user.photoURL
             })
         }).then(res => res.json()).then(data => {
             console.log(data);
         })
     }
-    return (
+    return (<>
         <div>
             <form>
                 <input type="text" placeholder='Your name' />
@@ -36,7 +45,7 @@ const Create = () => {
             </form>
             <button onClick={handleAuthWithGoogle}>Sign in with Google</button>
         </div>
-    );
+    </>);
 }
 
 export default Create;

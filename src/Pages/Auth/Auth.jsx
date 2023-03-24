@@ -1,9 +1,10 @@
 import React from 'react';
 import { NavLink, Outlet } from 'react-router-dom';
+import Header from '../../Components/Header/Header';
 
 import "./Auth.scss"
 const Auth = () => {
-    return (
+    return (<>
         <div className='auth'>
             <div className="cicle"></div>
             <div className='auth-form'>
@@ -20,7 +21,7 @@ const Auth = () => {
                 </div>
             </div>
         </div>
-    );
+    </>);
 }
 
 export default Auth;

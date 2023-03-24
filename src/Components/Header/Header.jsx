@@ -4,12 +4,14 @@ import { Link } from "react-router-dom"
 import i18n from '../../Language/i18next';
 import { useTranslation } from "react-i18next";
 import "./Header.scss"
-
+import { useSelector } from 'react-redux/es/exports';
 import { FiMessageCircle, FiHeart, FiUser } from "react-icons/fi";
 import { Button } from '../../Utils/Components';
 import { ContextColor } from '../../Context/ThmeContext';
 
 const Header = () => {
+    const {email} = useSelector(state => state)
+    console.log(email);
     const { theme, setTheme } = useContext(ContextColor)
     const { t } = useTranslation()
     const handleChangeLanguage = (e) => {
@@ -46,7 +48,7 @@ const Header = () => {
 
                         <Link className='header__nav-link' to="/auth">
                             <FiUser />
-                            {t("header__account")}
+                            { email ? email : t("header__account")}
                         </Link>
 
                         <Button type={"light"} text="Подать объявление" />

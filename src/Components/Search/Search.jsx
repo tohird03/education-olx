@@ -28,6 +28,7 @@ const Search = () => {
     }
 
     if(!listening && transcript.length > 1) {
+
         return navigate(`/search/${transcript}`)
     }
 
